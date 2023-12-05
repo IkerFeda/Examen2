@@ -2,19 +2,15 @@
 #include <map>
 #include <optional>
 
-using namespace std;
-
 class Environment {
 private:
     std::map<std::string, int> symbolTable;
 
 public:
-    Environment() {
-        symbolTable = std::map<std::string, int>();
-    }
+    Environment() = default;
 
     void insert(const std::string& symbol, int value) {
-        symbolTable.insert(std::make_pair(symbol, value));
+        symbolTable[symbol] = value;
     }
 
     void printSymbolTable() {
