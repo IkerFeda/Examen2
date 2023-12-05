@@ -14,9 +14,8 @@ public:
     }
 
     std::variant<int, float, std::string> getVariable(const std::string& name) {
-        auto it = variables.find(name);
-        if (it != variables.end()) {
-            return it->second;
+        if (variables.find(name) != variables.end()) {
+            return variables[name];
         } else {
             throw std::out_of_range("Variable '" + name + "' does not exist");
         }
@@ -28,7 +27,7 @@ int main() {
 
     env.setVariable("age", 25);
     env.setVariable("height", 1.75f);
-    env.setVariable("name", std::string("Juan")); // Usa std::string para el nombre
+    env.setVariable("name", std::string("Juan"));
 
     try {
         std::cout << "Age: " << std::get<int>(env.getVariable("age")) << std::endl;
@@ -38,6 +37,10 @@ int main() {
     } catch (const std::out_of_range& e) {
         std::cerr << "Error: " << e.what() << std::endl;
     }
+
+    std::cout << "Age: " << std::get<int>(env.getVariable("age")) << std::endl;
+    std::cout << "Height: " << std::get<float>(env.getVariable("height")) << std::endl;
+    std::cout << "Name: " << std::get<std::string>(env.getVariable("name")) << std::endl;
 
     return 0;
 }
