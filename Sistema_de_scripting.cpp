@@ -1,3 +1,16 @@
-//
-// Created by ikerf on 05/12/2023.
-//
+#include "map"
+#include "string"
+
+
+class Environment {
+private:
+    std::map<std::string, int> symbolTable;
+
+public:
+
+    Environment() {
+        symbolTable = std::map<std::string, int>();
+    }
+
+
+};
