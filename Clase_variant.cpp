@@ -18,7 +18,6 @@ public:
         if (it != variables.end()) {
             return it->second;
         } else {
-            // Si la variable no existe, se lanza una excepción
             throw std::out_of_range("Variable '" + name + "' does not exist");
         }
     }
@@ -28,10 +27,8 @@ int main() {
     Environment env;
 
     env.setVariable("age", 25);
-
     env.setVariable("height", 1.75f);
-
-    env.setVariable("name", "Juan");
+    env.setVariable("name", std::string("Juan")); // Usa std::string para el nombre
 
     try {
         std::cout << "Age: " << std::get<int>(env.getVariable("age")) << std::endl;
