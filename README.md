@@ -54,7 +54,7 @@ Link del repositorio #https://github.com/IkerFeda/Examen2.git
 
 - Aqui hay algunas de las mejoras que yo consideraria para mejorar el scripting:
 
-1. **Optimización de la tabla de símbolos:** Actualmente, la tabla de símbolos se implementa como un `std::unordered_map`. Si el sistema de scripting maneja un gran número de variables, podría ser beneficioso considerar una estructura de datos más eficiente, como un árbol de búsqueda binaria balanceado (por ejemplo, `std::map`) o una tabla hash con resolución de colisiones más eficiente.
+1. **Optimización de la tabla de símbolos:** Actualmente, la tabla de símbolos se implementa como un `std::unordered_map`. Si el sistema de scripting maneja un gran número de variables, podría ser beneficioso considerar una estructura de datos más eficiente, como un árbol de búsqueda binaria balanceado (por ejemplo, `std::map`).
 
 2. **Soporte para tipos de datos adicionales:** El sistema de scripting actualmente admite variables de tipo `int`, `float` y `std::string`. Para ampliar la funcionalidad del sistema, se podrían agregar más tipos de datos, como `bool`, `char`, `double`, etc.
 
