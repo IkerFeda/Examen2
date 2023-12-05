@@ -35,7 +35,7 @@ public:
         setVariable("player_speed", speed);
     }
 
-    // ...
+
 };
 
 int main() {
