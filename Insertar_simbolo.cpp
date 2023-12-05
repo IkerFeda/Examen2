@@ -1,8 +1,5 @@
-#include <map>
-#include <string>
 #include <iostream>
-
-using namespace std;
+#include <map>
 
 class Environment {
 private:
@@ -11,7 +8,6 @@ private:
 public:
 
     Environment() {
-        // Initialize the symbol table
         symbolTable = std::map<std::string, int>();
     }
 
@@ -19,6 +15,12 @@ public:
         symbolTable.insert(std::make_pair(symbol, value));
     }
 
+    void printSymbolTable() {
+        std::cout << "Symbol Table:" << std::endl;
+        for (const auto& pair : symbolTable) {
+            std::cout << pair.first << ": " << pair.second << std::endl;
+        }
+    }
 };
 
 int main() {
@@ -26,10 +28,7 @@ int main() {
     env.insert("x", 10);
     env.insert("y", 20);
 
-    std::cout << "Symbol Table:" << std::endl;
-    for (const auto& pair : env.symbolTable) {
-        std::cout << pair.first << ": " << pair.second << std::endl;
-    }
+    env.printSymbolTable();
 
     return 0;
 }
