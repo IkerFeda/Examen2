@@ -1,7 +1,7 @@
 # Examen2
 Link del repositorio #https://github.com/IkerFeda/Examen2.git
 
-###Parte 1: Opción multiple
+### Parte 1: Opción multiple
 
 1. ¿Cuál es el propósito principal de la clase Variant en el lenguaje Tiny Lisp?
    - a) Gestionar la entrada y salida del usuario
@@ -51,6 +51,7 @@ Link del repositorio #https://github.com/IkerFeda/Examen2.git
 7. **Casos_de_uso.cpp**: Este programa simula el rol de un programador de videojuegos e implementa, de manera simple y a pequeña escala, cómo se podría usar la clase `variant` en el desarrollo de videojuegos. Trata las variables `PlayerHealth` y `PlayerSpeed`, comunes en el ámbito de los videojuegos.
 
 ### Parte 2: Reflexión
+
 
 
 
