@@ -32,21 +32,23 @@ Link del repositorio #https://github.com/IkerFeda/Examen2.git
   - **Respuesta correcta:** a) Convierte una cadena JSON en un objeto Variant.
 
 
-Parte 2: Desarrollo de código
-Estructura_basica.cpp: Como su nombre indica, este código implementa la estructura más básica para definir una clase "environment". El return 0 se usa para corroborar su funcionamiento.
+### Parte 2: Desarrollo de código
 
-Insertar_simbolos.cpp: Este programa más desarrollado permite insertar símbolos a través de la función insert. Utiliza la variable symbolTable para almacenar información del mapa.
+1. **Estructura_basica.cpp**: Como su nombre indica, este código implementa la estructura más básica para definir una clase "environment". El `return 0` se usa para corroborar su funcionamiento.
 
-NOTA IMPORTANTE: A partir de aquí, los programas utilizan #include<optional> o #include<variant>, los cuales solo están disponibles para compiladores de C++17 en adelante. Si no se cuenta con dicho compilador, el programa no funcionará. Para que funcione en este caso, se deberá utilizar la librería Boost.
+2. **Insertar_simbolos.cpp**: Este programa más desarrollado permite insertar símbolos a través de la función `insert`. Utiliza la variable `symbolTable` para almacenar información del mapa.
 
-Función_lookup.cpp: Implementa la función lookup para buscar símbolos dentro de la clase "environment". En combinación con insert, permite insertar y encontrar símbolos.
+    **NOTA IMPORTANTE:** A partir de aquí, los programas utilizan `#include<optional>` o `#include<variant>`, los cuales solo están disponibles para compiladores de C++17 en adelante. Si no se cuenta con dicho compilador, el programa no funcionará. Para que funcione en este caso, se deberá utilizar la librería Boost.
 
-Gestion_errores.cpp: Como su nombre indica, gestiona y maneja errores que pueden ocurrir en el código de función_lookup.cpp. Implementa las funciones try y catch.
+3. **Función_lookup.cpp**: Implementa la función `lookup` para buscar símbolos dentro de la clase "environment". En combinación con `insert`, permite insertar y encontrar símbolos.
 
-Clase_variant.cpp: Implementa la clase variant para establecer el uso de múltiples variables y poder realizar operaciones con ellas. En este caso, se usan las variables age, height, y name.
+4. **Gestion_errores.cpp**: Como su nombre indica, gestiona y maneja errores que pueden ocurrir en el código de `función_lookup.cpp`. Implementa las funciones `try` y `catch`.
 
-Expandir_funciones.cpp: Este código toma el código anterior y agrega más funciones donde se utiliza la clase variant. Se añadieron específicamente tres funciones: comprobar la existencia de la variable, remover la variable o imprimir la variable en la terminal.
+5. **Clase_variant.cpp**: Implementa la clase `variant` para establecer el uso de múltiples variables y poder realizar operaciones con ellas. En este caso, se usan las variables `age`, `height`, y `name`.
 
-Casos_de_uso.cpp: Este programa simula el rol de un programador de videojuegos e implementa, de manera simple y a pequeña escala, cómo se podría usar la clase variant en el desarrollo de videojuegos. Trata las variables PlayerHealth y PlayerSpeed, comunes en el ámbito de los videojuegos.
+6. **Expandir_funciones.cpp**: Este código toma el código anterior y agrega más funciones donde se utiliza la clase `variant`. Se añadieron específicamente tres funciones: comprobar la existencia de la variable, remover la variable o imprimir la variable en la terminal.
+
+7. **Casos_de_uso.cpp**: Este programa simula el rol de un programador de videojuegos e implementa, de manera simple y a pequeña escala, cómo se podría usar la clase `variant` en el desarrollo de videojuegos. Trata las variables `PlayerHealth` y `PlayerSpeed`, comunes en el ámbito de los videojuegos.
+
 
 
