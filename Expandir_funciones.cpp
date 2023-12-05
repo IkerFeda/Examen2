@@ -28,6 +28,16 @@ public:
     bool variableExists(const std::string& name) {
         return variables.find(name) != variables.end();
     }
+
+    void printVariables() {
+        for (const auto& variable : variables) {
+            std::cout << variable.first << ": ";
+            std::visit([](const auto& value) {
+                std::cout << value;
+            }, variable.second);
+            std::cout << std::endl;
+        }
+    }
 };
 
 int main() {
@@ -52,6 +62,8 @@ int main() {
 
     env.removeVariable("age");
     std::cout << "Age exists: " << env.variableExists("age") << std::endl;
+
+    env.printVariables();
 
     return 0;
 }
