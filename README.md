@@ -52,6 +52,21 @@ Link del repositorio #https://github.com/IkerFeda/Examen2.git
 
 ### Parte 2: Reflexión
 
+- Aqui hay algunas de las mejoras que yo consideraria para mejorar el scripting:
+
+1. **Optimización de la tabla de símbolos:** Actualmente, la tabla de símbolos se implementa como un `std::unordered_map`. Si el sistema de scripting maneja un gran número de variables, podría ser beneficioso considerar una estructura de datos más eficiente, como un árbol de búsqueda binaria balanceado (por ejemplo, `std::map`) o una tabla hash con resolución de colisiones más eficiente.
+
+2. **Soporte para tipos de datos adicionales:** El sistema de scripting actualmente admite variables de tipo `int`, `float` y `std::string`. Para ampliar la funcionalidad del sistema, se podrían agregar más tipos de datos, como `bool`, `char`, `double`, etc.
+
+3. **Introducción de funciones más avanzadas:** Para hacer el sistema de scripting más poderoso, se podrían agregar funciones más avanzadas, como funciones matemáticas, funciones de cadena, funciones de tiempo, etc. Esto permitiría a los usuarios realizar operaciones más complejas y cálculos dentro del entorno de scripting.
+
+4. **Validación de tipos:** En la implementación actual, el sistema de scripting no realiza ninguna validación de tipos al obtener o establecer variables. Sería útil agregar una validación de tipos para garantizar que los usuarios no intenten obtener o establecer variables con tipos incorrectos.
+
+5. **Gestión de errores más robusta:** Si ocurre un error al obtener o establecer una variable en la implementación actual, simplemente se devuelve un valor predeterminado. Sería útil agregar una gestión de errores más robusta, como lanzar excepciones específicas o proporcionar mensajes de error más descriptivos para ayudar a los usuarios a identificar y solucionar problemas.
+
+
+
+
 
 
 
