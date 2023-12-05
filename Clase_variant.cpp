@@ -2,6 +2,7 @@
 #include <string>
 #include <variant>
 #include <unordered_map>
+#include <stdexcept>
 
 class Environment {
 private:
@@ -13,26 +14,33 @@ public:
     }
 
     std::variant<int, float, std::string> getVariable(const std::string& name) {
-        return variables[name];
+        auto it = variables.find(name);
+        if (it != variables.end()) {
+            return it->second;
+        } else {
+            // Si la variable no existe, se lanza una excepción
+            throw std::out_of_range("Variable '" + name + "' does not exist");
+        }
     }
 };
 
 int main() {
     Environment env;
 
-    // Asignar un valor entero a la variable "edad"
-    env.setVariable("edad", 25);
+    env.setVariable("age", 25);
 
-    // Asignar un valor de punto flotante a la variable "altura"
-    env.setVariable("altura", 1.75f);
+    env.setVariable("height", 1.75f);
 
-    // Asignar un valor de cadena a la variable "nombre"
-    env.setVariable("nombre", "Juan");
+    env.setVariable("name", "Juan");
 
-    // Obtener los valores de las variables y mostrarlos en la consola
-    std::cout << "Edad: " << std::get<int>(env.getVariable("edad")) << std::endl;
-    std::cout << "Altura: " << std::get<float>(env.getVariable("altura")) << std::endl;
-    std::cout << "Nombre: " << std::get<std::string>(env.getVariable("nombre")) << std::endl;
+    try {
+        std::cout << "Age: " << std::get<int>(env.getVariable("age")) << std::endl;
+        std::cout << "Height: " << std::get<float>(env.getVariable("height")) << std::endl;
+        std::cout << "Name: " << std::get<std::string>(env.getVariable("name")) << std::endl;
+
+    } catch (const std::out_of_range& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
 
     return 0;
 }
